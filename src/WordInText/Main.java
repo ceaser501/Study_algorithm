@@ -1,5 +1,6 @@
-package 문자열_문자속단어;
+package WordInText;
 
+// 문자열_문자 속 단어
 import java.util.*;
 
 public class Main {

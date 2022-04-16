@@ -1,5 +1,6 @@
-package 문자열_문자찾기;
+package FindCharacter;
 
+// 문자열_단어찾기
 import java.util.*;
 
 public class Main{

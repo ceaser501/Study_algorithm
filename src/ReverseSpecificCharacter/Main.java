@@ -1,5 +1,6 @@
-package 문자열_특정문자뒤집기;
+package ReverseSpecificCharacter;
 
+// 문자열_특정 문자 뒤집기
 import java.util.*;
 
 public class Main {

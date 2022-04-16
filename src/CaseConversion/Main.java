@@ -1,5 +1,6 @@
-package 문자열_대소문자변환;
+package CaseConversion;
 
+// 문자열_대소문자변환
 import java.util.*;
 
 public class Main {

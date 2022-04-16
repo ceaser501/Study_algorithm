@@ -1,5 +1,6 @@
-package 문자열_중복문자제거;
+package RemoveDuplicateCharacters;
 
+// 문자열_중복 문자 제거
 import java.util.*;
 
 public class Main {

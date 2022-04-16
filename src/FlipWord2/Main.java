@@ -1,5 +1,6 @@
-package 문자열_단어뒤집기2;
+package FlipWord2;
 
+// 문자열_단어뒤집기2
 import java.util.*;
 
 public class Main {
