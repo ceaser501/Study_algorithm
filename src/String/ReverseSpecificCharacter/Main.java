@@ -1,4 +1,4 @@
-package ReverseSpecificCharacter;
+package String.ReverseSpecificCharacter;
 
 // 문자열_특정 문자 뒤집기
 import java.util.*;

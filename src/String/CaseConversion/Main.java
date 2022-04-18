@@ -1,4 +1,4 @@
-package CaseConversion;
+package String.CaseConversion;
 
 // 문자열_대소문자변환
 import java.util.*;

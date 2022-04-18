@@ -1,4 +1,4 @@
-package WordInText;
+package String.WordInText;
 
 // 문자열_문자 속 단어
 import java.util.*;

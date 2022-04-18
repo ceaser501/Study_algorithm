@@ -1,4 +1,4 @@
-package Palindrome;
+package String.Palindrome;
 
 // 문자열_회문 문자열
 import java.util.Scanner;

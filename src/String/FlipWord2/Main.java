@@ -1,4 +1,4 @@
-package FlipWord2;
+package String.FlipWord2;
 
 // 문자열_단어뒤집기2
 import java.util.*;

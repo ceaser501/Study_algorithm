@@ -1,4 +1,4 @@
-package FindCharacter;
+package String.FindCharacter;
 
 // 문자열_단어찾기
 import java.util.*;

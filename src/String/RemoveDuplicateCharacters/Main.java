@@ -1,4 +1,4 @@
-package RemoveDuplicateCharacters;
+package String.RemoveDuplicateCharacters;
 
 // 문자열_중복 문자 제거
 import java.util.*;
