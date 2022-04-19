@@ -1,6 +1,6 @@
 package Array.Array_2_1_PrintLargeNumber;
 
-// 바열_큰수 출력하기
+// 배열_큰수 출력하기
 import java.util.*;
 
 public class Main {
