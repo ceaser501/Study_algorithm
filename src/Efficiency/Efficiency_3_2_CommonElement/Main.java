@@ -20,10 +20,25 @@ public class Main {
     List<Integer> list1 = Arrays.stream(arrN).boxed().collect(Collectors.toList());
     **/
 
-    List<Integer> list = Arrays.stream(arrN).boxed().collect(Collectors.toList());
+    Arrays.sort(arrN);
+    Arrays.sort(arrM);
 
+    // https://yuja-kong.tistory.com/183
+    // Collections.sort(Arrays.stream(arrN).boxed().collect(Collectors.toList()));
+    // Collections.sort(Arrays.stream(arrM).boxed().collect(Collectors.toList()));
 
-
+    int p1=0, p2=0;
+    while(p1<n && p2<m){
+      if(arrN[p1] == arrM[p2]){
+        answer.add(arrN[p1]);
+        p1++;
+        p2++;
+      }else if(arrN[p1] < arrM[p2]){
+        p1++;
+      }else{
+        p2++;
+      }
+    }
 
     return answer;
   }
