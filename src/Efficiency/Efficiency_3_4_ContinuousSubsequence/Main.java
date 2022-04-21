@@ -6,24 +6,18 @@ import java.util.*;
 public class Main {
 
     public int solution(int n, int m, int[] arr){
-        int answer = 0;
+      int answer = 0, lt = 0, sum = 0;
+      for(int rt=0; rt<n; rt++){
+          sum += arr[rt];                       // rt를 계속 ++ 이동하면서 sum에 더해준다
+          if(sum == m) answer++;                // sum이 m이라면 answer++
+          while(sum >= m){
+              sum-=arr[lt];                     // 만약 sum이 m보다 크거나 같다면, 맨 앞 arr[lt]를 빼줘야 한다
+              lt++;                             // lt++를 하나 옆으로 넘긴다
+              if(sum == m) answer++;            // 빼고도 m과 같을 수 있으므로 체크 해 줘야 한다
+          }
+      }
 
-        int sum = 0;                    // 합계
-        int k = 0;
-        for(int i=0; i<n; i++){
-            sum += arr[i];
-
-            if(sum > m){          // 합계가 합이되는 수 m보다 크다면,
-                sum -= arr[k];
-                k++;
-            }
-
-            if(sum == m){
-                answer++;
-                k++;
-            }
-        }
-        return answer;
+      return answer;
     }
 
 
