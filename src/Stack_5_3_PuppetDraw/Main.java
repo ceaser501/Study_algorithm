@@ -26,17 +26,25 @@ public class Main {
     int answer = 0;
 
     Stack<Integer> stack = new Stack<>();
-
+    Stack<Integer> stack2 = new Stack<>();
     for(int i=0; i<m; i++){
       int index = moves[i]-1;
 
       for(int j=arr.length-1; j>=0; j--){
-        if(arr[index][j] != 0) stack.push(arr[index][j]);
+        if(arr[j][index] != 0 && arr[j-1][index] == 0){
+          stack.push(arr[j][index]);
+//          arr[j][index] = 0;
+        }
       }
-    }
 
-    for(int i : stack){
-      System.out.print(" " + i);
+      // 기존 것과 넣으려는 것이 같으면 answer++ 하고 마지막 element삭제
+      if(!stack2.isEmpty() && stack2.lastElement() == stack.lastElement()){
+        answer++;
+        answer++;
+        stack2.remove(stack2.lastElement());
+      }else{                                                // 다르면 넣기
+        stack2.push(stack.lastElement());
+      }
     }
 
     return answer;
