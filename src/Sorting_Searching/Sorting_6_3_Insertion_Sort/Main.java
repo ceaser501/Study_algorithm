@@ -28,6 +28,18 @@ public class Main {
         }
       }
     }
+    return arr;
+  }
+
+  public int[] solution1(int n, int[] arr){
+    for(int i=1; i<n; i++){
+      int tmp = arr[i], j;
+      for(j=i-1; j>=0; j--){
+        if(arr[j] > tmp) arr[j+1] = arr[j];
+        else break;
+      }
+      arr[j+1] = tmp;
+    }
 
     return arr;
   }
@@ -43,6 +55,6 @@ public class Main {
       arr[i] = kb.nextInt();
     }
 
-    for(int m : T.solution(n, arr)) System.out.print(m + " ");
+    for(int m : T.solution1(n, arr)) System.out.print(m + " ");
   }
 }
