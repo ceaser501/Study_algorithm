@@ -12,8 +12,8 @@ class Point implements Comparable<Point>{   // Point 타입의 Comparable implem
 
   @Override
   public int compareTo(Point o) {
-    // o.y-this.y 는 내림차순 / o.x-this.x는 내림차순
-    if(this.x == o.x) return this.y-o.y;    // return의 결과가 음수 일 경우 오름차순 정렬, 양수 일 경우는 내림차순 정렬
+    // o.y-this.y = 음수 내림차순 / o.x-this.x = 양수 내림차순
+    if(this.x == o.x) return this.y-o.y;    // x를 우선비교하고, x가 같다면 y끼리 비교한다
     else return this.x-o.x;
   }
 }
@@ -33,6 +33,14 @@ class Main {
     }
 
     Collections.sort(arr);
+    /**
+     * 정렬 방법 정리
+     * Arrays.sort(배열);
+     * Arrays.sort(배열, Collections.reverseOrder());
+     *
+     * Collections.sort(리스트);
+     * Collections.sort(리스트, Collections.reverseOrder());
+     */
     for(Point o : arr) System.out.println(o.x + " " + o.y);
   }
 }
