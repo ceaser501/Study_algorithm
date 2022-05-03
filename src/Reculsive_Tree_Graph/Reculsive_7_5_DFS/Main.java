@@ -1,6 +1,6 @@
 package Reculsive_Tree_Graph.Reculsive_7_5_DFS;
 
-// 이진트리순회(DFS : Depth-First Search
+// DFS_이진트리순회(DFS : Depth-First Search)
 import java.util.*;
 class Node{
   int data;
