@@ -14,14 +14,14 @@ package Reculsive_Tree_Graph.Tree_7_8_FindACalf_BFS;
 import java.util.*;
 public class Main {
 
+  int[] mv = {1, -1, 5};
+  int[] ch;
+  Queue<Integer> Q = new LinkedList<>();
   public int BFS(int s, int e){
-    int L = 0;
-    int[] mv = {1, -1, 5};
-    int[] ch = new int[10001];
+    ch = new int[10001];
     ch[s] = 1;                      // ch[5] 에 1 세팅 (들어온 현수 위치 값을 탐색해야 하는지 체크하기 위함)
-    Queue<Integer> Q = new LinkedList<>();
     Q.offer(s);                     // 현수 위치를 Q에 offer
-
+    int L = 0;
     while(!Q.isEmpty()){
       int len = Q.size();
       for(int i=0; i<len; i++){
@@ -31,7 +31,7 @@ public class Main {
           int nx = curr + mv[j];    // 현재 poll 값에 mv 값을 1개씩 더해서 nx 생성
           if(nx == e) return L+1;   // 다음번 값이 return 되는 것이므로 Level + 1
           if(nx >= 1 && nx <= 10000 && ch[nx] == 0){ // 직선의 좌표점은 1~10,000까지이고, 이전에 탐색한 적이 없는 좌표라면,
-            ch[j] = 1;            // 신규탐색이므로 1
+            ch[nx] = 1;            // 신규탐색이므로 1
             Q.offer(nx);          // Q에 nx 추가
           }
         }
