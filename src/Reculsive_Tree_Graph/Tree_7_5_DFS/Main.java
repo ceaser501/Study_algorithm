@@ -1,7 +1,7 @@
-package Reculsive_Tree_Graph.Reculsive_7_5_DFS;
+package Reculsive_Tree_Graph.Tree_7_5_DFS;
 
 // DFS_이진트리순회(DFS : Depth-First Search)
-import java.util.*;
+
 class Node{
   int data;
   Node lt, rt;      // Node 클래스의 객체 주소를 저장하는 변수 lt, rt

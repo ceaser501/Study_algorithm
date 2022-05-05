@@ -1,4 +1,4 @@
-package Reculsive_Tree_Graph.Reculsive_7_8_FindACalf_BFS;
+package Reculsive_Tree_Graph.Tree_7_8_FindACalf_BFS;
 
 /**
  * 송아지 찾기 (BFS) - 상태트리검색

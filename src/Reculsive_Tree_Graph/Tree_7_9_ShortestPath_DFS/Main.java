@@ -1,4 +1,4 @@
-package Reculsive_Tree_Graph.Reculsive_7_9_ShortestPath_DFS;
+package Reculsive_Tree_Graph.Tree_7_9_ShortestPath_DFS;
 
 /**
  * 이진트리에서 루트 노드 1에서 말단노드까지의 길이 중 가장 짧은 길이를 구하시오

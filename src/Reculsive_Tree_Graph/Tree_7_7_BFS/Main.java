@@ -1,4 +1,4 @@
-package Reculsive_Tree_Graph.Reculsive_7_7_BFS;
+package Reculsive_Tree_Graph.Tree_7_7_BFS;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package Reculsive_Tree_Graph.Reculsive_7_6_DFS_2;
+package Reculsive_Tree_Graph.Tree_7_6_DFS_2;
 
 // DFS_부분집합 구하기
 

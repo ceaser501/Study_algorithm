@@ -1,4 +1,4 @@
-package Reculsive_Tree_Graph.Reculsive_7_10_ShortestPath_BFS;
+package Reculsive_Tree_Graph.Tree_7_10_ShortestPath_BFS;
 
 import java.util.*;
 
