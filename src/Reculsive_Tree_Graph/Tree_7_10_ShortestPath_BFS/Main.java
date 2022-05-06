@@ -20,7 +20,7 @@ public class Main {
     int L = 0;
     while(!Q.isEmpty()){
      //  System.out.println(Q.size());
-      int len = Q.size();               // 바로 for문에 Q.size()로 돌리면 답이안나옴, 확인 필요 (Queue사이즈가 바뀐다?)
+      int len = Q.size();
       for(int i=0; i<len; i++){
         Node curr = Q.poll();
         if(curr.lt == null && curr.rt == null) return L;
