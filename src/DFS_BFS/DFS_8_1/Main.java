@@ -1,4 +1,4 @@
-package DFS_BFS.DFS_8_1_EachOther;
+package DFS_BFS.DFS_8_1;
 
 // BFS활용_서로소 (두 부분집합으로 나누었을때, 부분집합끼리의 합이 같은 케이스가 있는가?)
 import java.util.*;
