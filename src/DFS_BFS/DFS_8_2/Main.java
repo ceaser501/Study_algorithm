@@ -6,7 +6,12 @@ public class Main {
 
   static int w, n, answer = 0;
   public void DFS(int L, int sum, int[] arr){
+    if(sum > w){
 
+    }else{
+      DFS(L+1, sum+arr[L], arr);
+    }
+    
   }
 
   public static void main(String args[]){
