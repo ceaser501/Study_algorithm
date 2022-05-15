@@ -3,38 +3,18 @@ import java.util.*;
 
 public class Main{
 
-    public int[] solution(char c, String str){
-        int[] answer = new int[str.length()];
+    public int solution(int[] a, int[] b) {
+        int answer = 0;
 
-        int dist = 1000;
-        char[] ch = str.toCharArray();
-
-        // 정방향
-        for(int i=0; i<ch.length; i++){
-            if(ch[i] == c) dist = 0;
-            else dist++;
-
-            answer[i] = dist;
+        for(int i=0; i<a.length; i++){
+            answer += (a[i] * b[i]);
         }
 
-        // 역방향
-        dist = 1000;
-        for(int j=ch.length-1; j>=0; j--){
-            if(ch[j] == c) dist = 0;
-            else{
-                dist++;
-                answer[j] = Math.min(answer[j], dist);
-            }
-        }
         return answer;
     }
 
     public static void main(String args[]){
         Main T = new Main();
-        Scanner kb = new Scanner(System.in);
-        String str = kb.next();
-        char c = kb.next().charAt(0);
-
-        for(int x : T.solution(c, str)) System.out.print(x + " ");
+        System.out.print(T.solution(new int[]{1, 2, 3, 4}, new int[]{-3, -1, 0, 2}));
     }
 }
