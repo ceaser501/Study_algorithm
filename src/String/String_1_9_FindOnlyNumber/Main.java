@@ -11,6 +11,17 @@ public class Main {
         return answer;
     }
 
+    public int solution3(String str){
+        String answer = "";
+
+        String regExp = "^[0-9]*$";
+        for(char c : str.toCharArray()){
+            if(String.valueOf(c).matches(regExp)) answer += c;
+        }
+
+        return Integer.parseInt(answer);
+    }
+
     // 2. 아스키코드를 이용한 방법
     public int solution1(String str){
         int answer = 0;

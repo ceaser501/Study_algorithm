@@ -1,39 +1,40 @@
-// 매일 문제 복습 풀기 (5번 완료)
+// 10. 가장짧은 문자거리
 import java.util.*;
 
-public class Main {
+public class Main{
 
-    public String solution(String s){
-        String answer = "";
+    public int[] solution(char c, String str){
+        int[] answer = new int[str.length()];
 
-        char[] ch = s.toCharArray();
-        int lt=0;
-        int rt=ch.length-1;
-        char temp = ' ';
-        while(lt<rt){
-            if(!Character.isAlphabetic(ch[lt])){
-                lt++;
-            }else if(!Character.isAlphabetic(ch[rt])){
-                rt--;
-            }else{
-                temp = ch[lt];
-                ch[lt] = ch[rt];
-                ch[rt] = temp;
+        int dist = 1000;
+        char[] ch = str.toCharArray();
 
-                lt++;
-                rt--;
-            }
+        // 정방향
+        for(int i=0; i<ch.length; i++){
+            if(ch[i] == c) dist = 0;
+            else dist++;
+
+            answer[i] = dist;
         }
 
-        answer = String.valueOf(ch);
+        // 역방향
+        dist = 1000;
+        for(int j=ch.length-1; j>=0; j--){
+            if(ch[j] == c) dist = 0;
+            else{
+                dist++;
+                answer[j] = Math.min(answer[j], dist);
+            }
+        }
         return answer;
     }
 
-    public static void main(String[] args){
+    public static void main(String args[]){
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
-        String s = kb.next();
+        String str = kb.next();
+        char c = kb.next().charAt(0);
 
-        System.out.println(T.solution(s));
+        for(int x : T.solution(c, str)) System.out.print(x + " ");
     }
 }
