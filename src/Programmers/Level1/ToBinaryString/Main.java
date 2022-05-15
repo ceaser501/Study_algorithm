@@ -1,11 +1,13 @@
-package Programmers.toBinaryString;
+package Programmers.Level1.ToBinaryString;
 
-//        String binaryString = Integer.toBinaryString(i); //2진수
-//        String octalString = Integer.toOctalString(i);   //8진수
-//        String hexString = Integer.toHexString(i);       //16진수
+/**
+ * String binaryString = Integer.toBinaryString(i); //2진수
+ * String octalString = Integer.toOctalString(i);   //8진수
+ * String hexString = Integer.toHexString(i);       //16진수
+ */
 
 // 보물지도
-class Solution {
+class Main {
     public String[] solution(int n, int[] arr1, int[] arr2) {
         String[] answer = new String[n];
 
@@ -27,7 +29,7 @@ class Solution {
     }
 
     public static void main(String args[]){
-        Solution T = new Solution();
+        Main T = new Main();
 
         for(String x : T.solution(5, new int[]{9, 20, 28, 18, 11}, new int[]{30, 1, 21, 17, 28})) System.out.print(x + " ");
     }
