@@ -4,7 +4,6 @@ package Programmers.Level1.Hash;
 import java.util.*;
 
 public class Main {
-
   public String solution(String[] participant, String[] completion) {
     String answer = "";
 
@@ -13,6 +12,23 @@ public class Main {
     }
     if(completion.length != participant.length - 1){
       return "completion의 길이는 participant의 길이보다 1 작습니다.";
+    }
+
+    HashMap<String, Integer> map = new HashMap<>();
+
+    for(String player : participant){
+      map.put(player, map.getOrDefault(player, 0) + 1);
+    }
+
+    for(String player : completion){
+      map.put(player, map.get(player)-1);
+    }
+
+    // https://fullstatck.tistory.com/10 : map for each
+    for(Map.Entry<String, Integer> entry : map.entrySet()){
+      if(entry.getValue() > 0){
+        answer += entry.getKey();
+      }
     }
 
 //    Arrays.stream(participant).filter(p -> !Arrays.asList(completion).contains(p)).forEach(
@@ -37,5 +53,7 @@ public class Main {
   public static void main(String args[]){
     Main T = new Main();
     System.out.println(T.solution(new String[]{"leo", "kiki", "eden"}, new String[]{"eden", "kiki"}));
+    System.out.println(T.solution(new String[]{"mislav", "stanko", "mislav", "ana"}, new String[]{"stanko", "ana", "mislav"}));
+
   }
 }
