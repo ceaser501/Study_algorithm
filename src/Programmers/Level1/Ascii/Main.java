@@ -3,6 +3,7 @@ package Programmers.Level1.Ascii;
 /**
  * 1. 문자를 int에 담으면, 아스키코드가 담기므로 그냥 대소비교가 가능하다
  * 2. Arrays.sort 를 하게되면, 내부 아스키코드를 기준으로 정렬이 된다 (오름차순)
+ * Arrays.sort(arr, 0, 4); 인덱스 부분정렬 가능
  * 3. 내림차순 정렬을 위해서는 StringBuilder의 정렬을 이용하면 간결하다
  */
 

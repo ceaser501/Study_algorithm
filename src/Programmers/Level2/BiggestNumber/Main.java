@@ -3,7 +3,6 @@ package Programmers.Level2.BiggestNumber;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 
 // 가장 큰 수
 public class Main {
@@ -35,12 +34,7 @@ public class Main {
     }
 
     // 정렬
-    Arrays.sort(result, new Comparator<String>() {
-      @Override
-      public int compare(String o1, String o2) {
-        return ((o2 + o1).compareTo(o1 + o2));
-      }
-    });
+    Arrays.sort(result, (o1, o2) -> ((o2 + o1).compareTo(o1 + o2)));
 
     // 0만 여러개 있는 배열의 경우 하나의 0만 리턴
     if(result[0].equals("0")) {
