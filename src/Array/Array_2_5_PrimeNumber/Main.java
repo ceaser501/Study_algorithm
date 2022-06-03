@@ -28,13 +28,13 @@ public class Main {
     }
 
     // 에라토스테네스의 체 적용해서 소수인지 체크하는 func
-    public boolean isPrime(int num) {
+    public boolean isPrime1(int num) {
         if(num == 1 || num == 0) {
             // 1과 0은 소수에서 제외되니 false처리
             return false;
         }
 
-        //⭐⭐ 소수를 찾을때는 아리스토테네스의 체의 limit을 계산한다.
+        //⭐⭐ 소수를 찾을때는 에라토스테네스의 체의 limit을 계산한다.
         // 소수인지 확인하려고 하는 값의 제곱근을 구한다. => Math.sqrt(number)
         int limit = (int) Math.sqrt(num);
 
